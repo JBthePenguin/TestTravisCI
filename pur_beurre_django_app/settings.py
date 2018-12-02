@@ -145,3 +145,15 @@ STATIC_URL = '/static/'
 
 INTERNAL_IPS = ['127.0.0.1']
 
+
+if 'TRAVIS' in os.environ:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'travisci',
+            'USER': 'postgres',
+            'PASSWORD': '',
+            'HOST': 'localhost',
+            'PORT': '',
+        }
+}
