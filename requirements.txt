@@ -11,5 +11,3 @@ django-fixture-magic
 psycopg2
 
 psycopg2-binary
-
-whitenoise

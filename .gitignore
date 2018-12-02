@@ -13,3 +13,5 @@ product/migrations/__pycache__/
 favorite/__pycache__/
 
 favorite/migrations/__pycache__/
+
+geckodriver.log
