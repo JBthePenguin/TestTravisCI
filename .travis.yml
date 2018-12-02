@@ -14,13 +14,17 @@ addons:
   firefox: latest
 
 install:
+  
+
+before_install:
+  # Required to run browser tests (FF) ##
+  - ./setup_geckodriver.sh
+  - export PATH="${HOME}/geckodriver:${PATH}"
+
+install:
+  - make run-web-app
   - pip install -r requirements.txt
   - pip install selenium
-
-before_script:
-  # Required to run browser tests (FF) ##
-  - sudo ./setup_geckodriver.sh
-  - export PATH="${HOME}/geckodriver:${PATH}"
 
 script:
   - ./manage.py test
