@@ -1,0 +1,83 @@
+{% extends 'product/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<header id="search" class="masthead text-center text-white d-flex">
+  <div class="container my-auto">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <h1 class="text-uppercase">
+          <strong>Du gras, oui, mais de qualité!</strong>
+        </h1>
+        <hr>
+      </div>
+      <div class="col-lg-8 mx-auto">
+        <h2>Trouvez un produit de substitution pour ceux que vous consommez tous les jours.</h2>
+        {% if alert_message is not False %}
+          <div class="alert alert-warning alert-dismissible">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Désolé!</strong> Aucun produit n'a été trouvé.
+          </div>
+        {% endif %}
+        <form class="form-wrapper" action="{% url 'search_product' %}" method="get">
+          <input type="text" id="input_search" name="search_term" placeholder="Saisir le nom du produit que vous voulez substituer:" required autofocus>
+          <input type="submit" value="CHERCHER" id="submit" >
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="bg-primary" id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <h2 class="section-heading text-white">Colette et Remy</h2>
+        <hr class="light my-4">
+        <p class="mb-4">
+          <h3>De la ratatouille aux croissants</h3>
+          Pur Beurre est l'initiative de deux amoureux de la gastronomie française, Colette Tatou et Rémy, que vous avez déjà certainement rencontrés dans notre excellent restaurant Ratatouille.<br><br><b>Colette Tatou</b> : "<i>Nous aimons tous manger, surtout en France ! Personnellement, une baguette fraîche, du bon fromage de chèvre et un bon vin rouge me suffisent amplement. Comme tout le monde, je fais mes courses au supermarché. Mais petit à petit je me suis rendue compte, surtout lorsque nous avons ouvert le restaurant, que je pouvais remplacer les produits aseptisés que j'avais l'habitude d'acheter par de bons produits du terroir Et souvent pour le même prix !</i>"<br><br><b>Remy</b> : "<i>Pour ma part je me rendais déjà dans bien des magasins car j'aime beaucoup me balader, surtout dans les caves et les cuisines. Je connaissais par coeur le contenu des boutiques bio (dont je raffole) ainsi que les ingrédients de tous les aliments vendus. Lorsque Colette m'a demandé si elle pouvait remplacer son Nutella matinal par un aliment plus sain, je savais tout de suite où le trouver. L'idée de Pur Beurre était née !</i>"
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-md-6 my-auto text-center">
+          <figure>
+            <img src="{% static 'product/img/colette.png' %}" width="20%">
+            <figcaption>Colette</figcaption>
+          </figure>
+        </div>
+        <div class="col-md-6 my-auto text-center">
+          <figure>
+            <img src="{% static 'product/img/remy.png' %}" width="20%">
+              <figcaption>Remy</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 mx-auto text-center">
+        <h2 class="section-heading">Contactez-nous!</h2>
+        <hr class="my-4">
+        <p class="mb-5">pour tous renseignements ou envoyer un commentaire.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 ml-auto text-center">
+        <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
+        <p>01-23-45-67-89</p>
+      </div>
+      <div class="col-md-4 mr-auto text-center">
+        <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
+        <p>mail@mail.com</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

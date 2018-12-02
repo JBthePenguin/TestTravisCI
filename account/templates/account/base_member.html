@@ -1,0 +1,39 @@
+{% load static %}
+
+<div id="member_gui" class="col-md-4 my-auto">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <a class="logo_member_gui" href="/account/my_account/">
+          <i class="fa fa-2x fa-user" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div class="col-md-5">
+        <a class="logo_member_gui" href="/favorite/">
+          <img src="{% static 'account/img/favorite.png' %}">
+        </a>
+      </div>
+      <div class="col-md-2">
+        <a class="logo_member_gui" href="{% url 'auth_logout' %}?next=/">
+          <i class="fa fa-sign-out" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="collapse navbar-collapse" id="navbarResponsive">
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+    <a class="nav-link js-scroll-trigger" href="/">CHERCHER</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link js-scroll-trigger" href="/account/my_account/">MON COMPTE</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link js-scroll-trigger" href="/favorite/">MES PRODUITS</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link js-scroll-trigger" href="{% url 'auth_logout' %}?next=/">SE DECONNECTER</a>
+    </li>
+  </ul>
+</div>

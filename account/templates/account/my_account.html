@@ -1,0 +1,49 @@
+{% extends 'product/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div id="my_account_page">
+<header  class="masthead text-center text-white d-flex">
+  <div class="container my-auto">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <h1 class="text-uppercase">
+          {% if user.userprofile.gender is True %}
+          A girl !<br>
+          {% else %}
+          A boy !<br>
+          {% endif %}
+          <strong>{{ user.username }}</strong>
+        </h1>
+        <hr>
+      </div>
+  </div>
+</header>
+
+<section id="informations">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6 mx-auto my-auto text-center">
+        <img src="{% static 'account/img/user.png' %}">
+      </div>
+      <div class="col-sm-12 col-md-6 mx-auto my-auto text-center">
+        <p>
+          <strong>Informations personnelles</strong>
+        </p>
+        <ul class="text-left">
+          <li>
+            <i>Prénom: </i> {{ user.first_name }}
+          </li>
+          <li>
+            <i>Nom: </i> {{ user.last_name }}
+          </li>
+          <li>
+            <i>Email: </i> {{ user.email }}
+          </li>
+        </ul>
+      </div>
+</section>
+</div>
+
+{% endblock %}

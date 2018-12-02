@@ -1,0 +1,109 @@
+{% extends 'product/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<header id="header_prod_list" class="masthead bg-dark text-white text-center">
+  <div class="container my-auto">
+    <div class="row">
+      <div class="col-md-1 my-auto">
+        <a type="button" class="btn" href="{{ request.META.HTTP_REFERER }}">RETOUR</a>
+      </div>
+      <div class="product-holder col-md-3 mx-auto my-auto">
+        <a href="{{ product.image_url }}">
+          <img class="img-fluid product-image" src="{{ product.image_url }}" alt="Photo du produit non disponible" width="80%">
+        </a>
+      </div>
+      <div class="col-md-4 mx-auto my-auto">
+        <h2>
+          {{ product.product_name }}
+        </h2>
+        <p>
+          <strong>Marque: </strong>{{ product.brands }}
+        </p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="bg-primary" id="description">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6 mx-auto my-auto text-center">
+        <img class="img-fluid" src="/static/product/img/nutrition_grades/nutriscore-{{ product.nutrition_grades }}.png" alt="nutriscore non disponible" width="50%">
+      </div>
+      <div class="col-sm-12 col-md-6 mx-auto my-auto text-center">
+        <p>
+          <strong>Repères nutritionnels pour 100g:</strong>
+        </p>
+        <ul class="text-left">
+          <li>
+            {% if product.fat == None %}
+              Matières grasses non renseignées
+            {% else %}
+              {% if product.fat == 'low' %}
+              <img class="img-fluid" src="{%static 'product/img/nutriment/low.png' %}"> 
+              {% elif product.fat == 'high' %}
+              <img class="img-fluid" src="{%static 'product/img/nutriment/high.png' %}">
+              {% else %}
+              <img class="img-fluid" src="{%static 'product/img/nutriment/moderate.png' %}">
+              {% endif %}
+               {{ product.fat_100g }} g de Matières grasses
+            {% endif %}
+          </li>
+          <li>
+            {% if product.saturated_fat == None %}
+              Acides gras saturés non renseignés
+            {% else %}
+              {% if product.saturated_fat == 'low' %}
+              <img class="img-fluid" src="{%static 'product/img/nutriment/low.png' %}"> 
+              {% elif product.saturated_fat == 'high' %}
+              <img class="img-fluid" src="{%static 'product/img/nutriment/high.png' %}">
+              {% else %}
+              <img class="img-fluid" src="{%static 'product/img/nutriment/moderate.png' %}">
+              {% endif %}
+               {{ product.saturated_fat_100g }} g d'Acides gras saturés
+            {% endif %}
+          </li>
+          <li>
+            {% if product.sugars == None %}
+              Sucres non renseignés
+            {% else %}
+              {% if product.sugars == 'low' %}
+              <img class="img-fluid" src="{%static 'product/img/nutriment/low.png' %}"> 
+              {% elif product.sugars == 'high' %}
+              <img class="img-fluid" src="{%static 'product/img/nutriment/high.png' %}">
+              {% else %}
+              <img class="img-fluid" src="{%static 'product/img/nutriment/moderate.png' %}">
+              {% endif %}
+               {{ product.sugars_100g }} g de Sucres
+            {% endif %}
+          </li>
+          <li>
+            {% if product.salt == None %}
+              Sel non renseigné
+            {% else %}
+              {% if product.salt == 'low' %}
+              <img class="img-fluid" src="{%static 'product/img/nutriment/low.png' %}"> 
+              {% elif product.salt == 'high' %}
+              <img class="img-fluid" src="{%static 'product/img/nutriment/high.png' %}">
+              {% else %}
+              <img class="img-fluid" src="{%static 'product/img/nutriment/moderate.png' %}">
+              {% endif %}
+               {{ product.salt_100g }} g de Sel
+            {% endif %}
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-12 mx-auto my-auto text-center">
+        <a class="btn" href="{{ product.url }}" onclick="window.open(this.href);  return false;">
+          Voir le descriptif complet sur le site <i>OpenFoodFacts</i><br>
+          {{ product.url }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,136 @@
+{% extends 'product/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div id="page_product_list">
+<header id="header_prod_list" class="masthead bg-dark text-white text-center">
+  <div class="container my-auto">
+    <div class="row">
+      <div class="product-holder col-md-3 mx-auto my-auto">
+        <a href="{{ product.image_url }}">
+          <img class="img-fluid product-image" src="{{ product.image_small_url }}" alt="Photo du produit non disponible" width="70%">
+          <img class="plus-image" src="/static/product/img/nutrition_grades/nutriscore-{{ product.nutrition_grades }}.png" alt="nutriscore non disponible" width="23%">
+        </a>
+      </div>
+      <div class="col-md-4 mx-auto my-auto">
+        <h2>
+          {{ product.product_name }}
+        </h2>
+        <p>
+          <strong>Marque: </strong>{{ product.brands }}
+        </p>
+        <a class="btn" href="/product/{{ product.id }}/">Voir la fiche descriptive</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="p-0" id="portfolio">
+  <div class="container-fluid p-0">
+    {% if substitutes is False %}
+    <div class="alert alert-warning">
+      <strong>Désolé!</strong> Aucun substitut à ce produit n'a été trouvé.<br>
+    </div>
+    {% else %}
+    {% if not user.is_authenticated %}
+    <h6 class="text-center"><small><i>Pour sauvegarder des produits, <a href="{% url 'auth_login' %}">se connecter</a> ou <a href="{% url 'registration_register' %}">créer un compte</a>.</i></small></h6> 
+    {% endif %}
+    <h2 class="text-center">Vous pouvez remplacer cet aliment par:</h2><br>
+    <div class="row no-gutters popup-gallery">
+      {% for substitute in substitutes %}
+      <div class="portfolio-box col-md-4 col-sm-12 my-auto text-center">
+        <figure>
+          <a href="{{ substitute.image_url }}">
+            <img class="img-fluid product-image" src="{{ substitute.image_small_url }}" alt="Photo non disponible" width="25%">
+            <img class="plus-image" src="/static/product/img/nutrition_grades/nutriscore-{{ substitute.nutrition_grades }}.png" alt="nutriscore non disponible" width="13%">
+          </a>
+          <figcaption>
+            <strong>{{ substitute.product_name }}</strong><br>Marque: <i>{{ substitute.brands }}</i><br>
+            <a class="btn" href="/product/{{ substitute.id }}/">Voir la fiche descriptive</a><br>
+            {% if user.is_authenticated %}
+            <!-- Save check for member -->
+            <div class="checkbox">
+              {% if checked %}
+                <input id="{{ substitute.id }}" type="checkbox" class="save_prod" checked>
+              {% else %}
+                {% if substitute.id in substitutes_saved %}
+                  <input id="{{ substitute.id }}" type="checkbox" class="save_prod" checked>
+                {% else %}
+                  <input id="{{ substitute.id }}" type="checkbox" class="save_prod" unchecked>
+                {% endif %}
+              {% endif %}
+              <label for="{{ substitute.id }}">Sauvegarder</label>
+            </div>
+            {% endif %}
+          </figcaption>
+         </figure>
+      </div>
+      {% endfor %}
+      {% if paginate %}
+      <nav class="col-md-10 mx-auto" aria-label="...">
+        <ul class="pager col-md-3 mx-auto text-center">
+          {% if substitutes.has_previous %}
+          <li class="previous">
+            <a class="btn col-md-5 mx-auto my-auto" href="?page={{ substitutes.previous_page_number }}">&larr; Précédent</a>
+          </li>
+          {% endif %}
+          {% if substitutes.has_next %}
+          <li class="next">
+            <a class="btn col-md-5 mx-auto my-auto" href="?page={{ substitutes.next_page_number }}">Suivant &rarr;</a>
+          </li>
+          {% endif %}
+        </ul>
+      </nav>
+      {% endif %}
+    {% endif %}
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- set up the modal to start hidden and fade in and out -->
+<div id="myModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- dialog body -->
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        Hello world!
+      </div>
+      <!-- dialog buttons -->
+      <div class="modal-footer"><button type="button" class="btn btn-primary">OK</button></div>
+    </div>
+  </div>
+</div>
+
+{% if user.is_authenticated %}
+<!-- script JS for check save product  (http request)-->
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
+</script>
+<script>
+  $(document).ready(function() {
+    $(".save_prod").change(function() {
+      var id = $(this).attr("id");
+      if(this.checked) {
+        $.get(
+          "/favorite/save/{{ product.id }}/" + id + "/",
+        );
+      } else {
+        if(confirm("Êtes-vous sûr(e) de vouloir supprimer ce produit?")){
+          $.get(
+            "/favorite/delete/{{ product.id }}/" + id + "/",
+          );
+        } else {
+          $(this).prop( "checked", true );
+        }
+      }
+    });
+  });
+</script>
+{% endif %}
+
+{% endblock %}

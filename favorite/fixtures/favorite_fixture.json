@@ -1,0 +1,220 @@
+[
+{
+    "model": "product.product",
+    "pk": 95487,
+    "fields": {
+        "code": "3292590815127",
+        "product_name": "Pizza Regina",
+        "brands": "Thiriet",
+        "categories": "Surgel\u00e9s,Pizzas et tartes surgel\u00e9es,Pizzas surgel\u00e9es,Pizzas au jambon",
+        "nutrition_grades": "b",
+        "url": "https://fr.openfoodfacts.org/produit/3292590815127/pizza-regina-thiriet",
+        "image_url": "https://static.openfoodfacts.org/images/products/329/259/081/5127/front_fr.12.400.jpg",
+        "image_small_url": "https://static.openfoodfacts.org/images/products/329/259/081/5127/front_fr.12.200.jpg",
+        "fat": "moderate",
+        "salt": "moderate",
+        "saturated_fat": "moderate",
+        "sugars": "low",
+        "fat_100g": 11,
+        "saturated_fat_100g": 3,
+        "sugars_100g": 3,
+        "salt_100g": 1
+    }
+},
+{
+    "model": "product.product",
+    "pk": 25699,
+    "fields": {
+        "code": "3560070822492",
+        "product_name": "Pizza La G\u00e9ante Royale",
+        "brands": "Carrefour",
+        "categories": "Pizzas surgel\u00e9es,Pizzas au jambon",
+        "nutrition_grades": "c",
+        "url": "https://fr.openfoodfacts.org/produit/3560070822492/pizza-la-geante-royale-carrefour",
+        "image_url": "https://static.openfoodfacts.org/images/products/356/007/082/2492/front_fr.18.400.jpg",
+        "image_small_url": "https://static.openfoodfacts.org/images/products/356/007/082/2492/front_fr.18.200.jpg",
+        "fat": "moderate",
+        "salt": "moderate",
+        "saturated_fat": "moderate",
+        "sugars": "low",
+        "fat_100g": 8,
+        "saturated_fat_100g": 3,
+        "sugars_100g": 2,
+        "salt_100g": 1
+    }
+},
+{
+    "model": "product.product",
+    "pk": 77820,
+    "fields": {
+        "code": "3662072013370",
+        "product_name": "P\u00e2te \u00e0 Tartiner",
+        "brands": "So Tasty",
+        "categories": "Produits \u00e0 tartiner,Petit-d\u00e9jeuners,Produits \u00e0 tartiner sucr\u00e9s,P\u00e2tes \u00e0 tartiner,P\u00e2tes \u00e0 tartiner au chocolat,P\u00e2tes \u00e0 tartiner aux noisettes,P\u00e2tes \u00e0 tartiner aux noisettes et au cacao",
+        "nutrition_grades": "a",
+        "url": "https://fr.openfoodfacts.org/produit/3662072013370/pate-a-tartiner-so-tasty",
+        "image_url": "https://static.openfoodfacts.org/images/products/366/207/201/3370/front_fr.4.400.jpg",
+        "image_small_url": "https://static.openfoodfacts.org/images/products/366/207/201/3370/front_fr.4.200.jpg",
+        "fat": "moderate",
+        "salt": "low",
+        "saturated_fat": "low",
+        "sugars": "low",
+        "fat_100g": 6,
+        "saturated_fat_100g": 1,
+        "sugars_100g": 3,
+        "salt_100g": 0
+    }
+},
+{
+    "model": "product.product",
+    "pk": 29922,
+    "fields": {
+        "code": "3456300004755",
+        "product_name": "P\u00e2te \u00e0 tartiner sans sucres ajout\u00e9s",
+        "brands": "Kar\u00e9l\u00e9a",
+        "categories": "Petit-d\u00e9jeuners,Produits \u00e0 tartiner,Produits \u00e0 tartiner sucr\u00e9s,P\u00e2tes \u00e0 tartiner,P\u00e2tes \u00e0 tartiner au chocolat,P\u00e2tes \u00e0 tartiner aux noisettes,P\u00e2tes \u00e0 tartiner aux noisettes et au cacao",
+        "nutrition_grades": "c",
+        "url": "https://fr.openfoodfacts.org/produit/3456300004755/pate-a-tartiner-sans-sucres-ajoutes-karelea",
+        "image_url": "https://static.openfoodfacts.org/images/products/345/630/000/4755/front_fr.15.400.jpg",
+        "image_small_url": "https://static.openfoodfacts.org/images/products/345/630/000/4755/front_fr.15.200.jpg",
+        "fat": "high",
+        "salt": "low",
+        "saturated_fat": "high",
+        "sugars": "moderate",
+        "fat_100g": 34,
+        "saturated_fat_100g": 7,
+        "sugars_100g": 8,
+        "salt_100g": 0
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$100000$6MaunZ5SEehu$rFaS+VYgtfijIQiR8YgeTtuQ899XeWb2/IMWJZJgiSk=",
+        "last_login": "2018-06-02T17:07:09.802Z",
+        "is_superuser": false,
+        "username": "grossebouffe",
+        "first_name": "Jean",
+        "last_name": "Bon",
+        "email": "test@tesmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2018-06-02T15:18:17.724Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "product.product",
+    "pk": 29949,
+    "fields": {
+        "code": "3175681105393",
+        "product_name": "P\u00e2te \u00e0 tartiner",
+        "brands": "Gerbl\u00e9,Glucoregul",
+        "categories": "Petit-d\u00e9jeuners,Produits \u00e0 tartiner,Produits \u00e0 tartiner sucr\u00e9s,P\u00e2tes \u00e0 tartiner,P\u00e2tes \u00e0 tartiner au chocolat,P\u00e2tes \u00e0 tartiner aux noisettes,P\u00e2tes \u00e0 tartiner aux noisettes et au cacao",
+        "nutrition_grades": "a",
+        "url": "https://fr.openfoodfacts.org/produit/3175681105393/pate-a-tartiner-gerble",
+        "image_url": "https://static.openfoodfacts.org/images/products/317/568/110/5393/front_fr.11.400.jpg",
+        "image_small_url": "https://static.openfoodfacts.org/images/products/317/568/110/5393/front_fr.11.200.jpg",
+        "fat": "moderate",
+        "salt": "low",
+        "saturated_fat": "low",
+        "sugars": "moderate",
+        "fat_100g": 7,
+        "saturated_fat_100g": 1,
+        "sugars_100g": 6,
+        "salt_100g": 0
+    }
+},
+{
+    "model": "product.product",
+    "pk": 14239,
+    "fields": {
+        "code": "3017620429484",
+        "product_name": "Nutella",
+        "brands": "Ferrero,Nutella",
+        "categories": "Petit-d\u00e9jeuners,Produits \u00e0 tartiner,Produits \u00e0 tartiner sucr\u00e9s,P\u00e2tes \u00e0 tartiner,P\u00e2tes \u00e0 tartiner au chocolat,P\u00e2tes \u00e0 tartiner aux noisettes,P\u00e2tes \u00e0 tartiner aux noisettes et au cacao",
+        "nutrition_grades": "e",
+        "url": "https://fr.openfoodfacts.org/produit/3017620429484/nutella-ferrero",
+        "image_url": "https://static.openfoodfacts.org/images/products/301/762/042/9484/front_fr.147.400.jpg",
+        "image_small_url": "https://static.openfoodfacts.org/images/products/301/762/042/9484/front_fr.147.200.jpg",
+        "fat": "high",
+        "salt": "low",
+        "saturated_fat": "high",
+        "sugars": "high",
+        "fat_100g": 31,
+        "saturated_fat_100g": 11,
+        "sugars_100g": 56,
+        "salt_100g": 0
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$100000$9twsEtYSwZy3$kx7n4GYQLMeSRv9b/gjKHWSZgzsVLfcWwzpNZXngZPg=",
+        "last_login": "2018-06-01T04:35:43.662Z",
+        "is_superuser": false,
+        "username": "usertest2",
+        "first_name": "sdfg",
+        "last_name": "sdfg",
+        "email": "sdgh@jkl.hhh",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2018-06-01T04:35:29.951Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "favorite.favorite",
+    "pk": 46,
+    "fields": {
+        "user": 4,
+        "fav_product": 25699,
+        "fav_substitute": 95487,
+        "creating_date": "2018-06-02T17:08:11.655Z"
+    }
+},
+{
+    "model": "favorite.favorite",
+    "pk": 45,
+    "fields": {
+        "user": 4,
+        "fav_product": 14239,
+        "fav_substitute": 77820,
+        "creating_date": "2018-06-02T17:07:50.637Z"
+    }
+},
+{
+    "model": "favorite.favorite",
+    "pk": 44,
+    "fields": {
+        "user": 4,
+        "fav_product": 14239,
+        "fav_substitute": 29922,
+        "creating_date": "2018-06-02T17:07:44.243Z"
+    }
+},
+{
+    "model": "favorite.favorite",
+    "pk": 43,
+    "fields": {
+        "user": 4,
+        "fav_product": 14239,
+        "fav_substitute": 29949,
+        "creating_date": "2018-06-02T17:07:40.136Z"
+    }
+},
+{
+    "model": "favorite.favorite",
+    "pk": 42,
+    "fields": {
+        "user": 3,
+        "fav_product": 14239,
+        "fav_substitute": 29949,
+        "creating_date": "2018-06-01T04:38:15.269Z"
+    }
+}
+]

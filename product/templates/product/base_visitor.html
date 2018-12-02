@@ -1,0 +1,15 @@
+{% load static %}
+<div class="col-md-1"></div>
+<div id="visitor_gui" class="col-md-3 my-auto">
+  <a class="btn btn-xl js-scroll-trigger" href="{% url 'auth_login' %}">CONNEXION</a>
+</div>
+<div class="collapse navbar-collapse" id="navbarResponsive">
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+    <a class="nav-link js-scroll-trigger" href="/">CHERCHER</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link js-scroll-trigger" href="{% url 'auth_login' %}">CONNEXION</a>
+    </li>
+  </ul>
+</div>

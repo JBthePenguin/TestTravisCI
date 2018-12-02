@@ -1,0 +1,29 @@
+{% extends 'product/base.html' %}
+
+{% block content %}
+<header id="login_register_page" class="masthead text-center text-white d-flex">
+  <div class="container my-auto">
+    <div class="row">
+      <!-- LOGIN -->
+      <div id="login_side" class="col-lg-5 mx-auto my-auto">
+        <h2>Connexion</h2>
+        <form method="post" action="{% url 'auth_login' %}">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <div>
+          <button class="btn" type="submit">Se connecter</button>
+          <!-- redirect to previous page after login -->
+          </div>
+          {% if 'account/login/' in request.META.HTTP_REFERER %}
+          <input type="hidden" name="next" value="../my_account">
+          {% else %}
+          <input type="hidden" name="next" value="{{ request.META.HTTP_REFERER }}">
+          {% endif %}
+          <br><p><small><i>Pas encore de compte?</i></small><a href="{% url 'registration_register' %}"><strong><i> !!!  S'INSCRIRE  !!! </i></strong> </a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+{% endblock %}
+

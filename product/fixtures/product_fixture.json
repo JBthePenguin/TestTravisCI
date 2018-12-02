@@ -1,0 +1,222 @@
+[
+{
+    "model": "product.product",
+    "pk": 16028,
+    "fields": {
+        "code": "80176800",
+        "product_name": "Nutella",
+        "brands": "Ferrero,Nutella",
+        "categories": "en:breakfasts, en:spreads, en:sweet-spreads, fr:pates-a-tartiner, en:chocolate-spreads, en:hazelnut-spreads, en:cocoa-and-hazelnuts-spreads, en:P\u00e2tes \u00e0 tartiner",
+        "nutrition_grades": "e",
+        "url": "https://fr.openfoodfacts.org/produit/80176800/nutella-ferrero",
+        "image_url": "https://static.openfoodfacts.org/images/products/80176800/front_fr.38.400.jpg",
+        "image_small_url": "https://static.openfoodfacts.org/images/products/80176800/front_fr.38.200.jpg",
+        "fat": "high",
+        "salt": "low",
+        "saturated_fat": "high",
+        "sugars": "high",
+        "fat_100g": 32,
+        "saturated_fat_100g": 11,
+        "sugars_100g": 57,
+        "salt_100g": 0
+    }
+},
+{
+    "model": "product.product",
+    "pk": 14239,
+    "fields": {
+        "code": "3017620429484",
+        "product_name": "Nutella",
+        "brands": "Ferrero,Nutella",
+        "categories": "Petit-d\u00e9jeuners,Produits \u00e0 tartiner,Produits \u00e0 tartiner sucr\u00e9s,P\u00e2tes \u00e0 tartiner,P\u00e2tes \u00e0 tartiner au chocolat,P\u00e2tes \u00e0 tartiner aux noisettes,P\u00e2tes \u00e0 tartiner aux noisettes et au cacao",
+        "nutrition_grades": "e",
+        "url": "https://fr.openfoodfacts.org/produit/3017620429484/nutella-ferrero",
+        "image_url": "https://static.openfoodfacts.org/images/products/301/762/042/9484/front_fr.147.400.jpg",
+        "image_small_url": "https://static.openfoodfacts.org/images/products/301/762/042/9484/front_fr.147.200.jpg",
+        "fat": "high",
+        "salt": "low",
+        "saturated_fat": "high",
+        "sugars": "high",
+        "fat_100g": 31,
+        "saturated_fat_100g": 11,
+        "sugars_100g": 56,
+        "salt_100g": 0
+    }
+},
+{
+    "model": "product.product",
+    "pk": 13611,
+    "fields": {
+        "code": "59032823",
+        "product_name": "Nutella",
+        "brands": "Nutella",
+        "categories": "Produits \u00e0 tartiner,Petit-d\u00e9jeuners,Produits \u00e0 tartiner sucr\u00e9s,P\u00e2tes \u00e0 tartiner,P\u00e2tes \u00e0 tartiner au chocolat,P\u00e2tes \u00e0 tartiner aux noisettes,P\u00e2tes \u00e0 tartiner aux noisettes et au cacao",
+        "nutrition_grades": "e",
+        "url": "https://fr.openfoodfacts.org/produit/59032823/nutella",
+        "image_url": "https://static.openfoodfacts.org/images/products/59032823/front_fr.13.400.jpg",
+        "image_small_url": "https://static.openfoodfacts.org/images/products/59032823/front_fr.13.200.jpg",
+        "fat": "high",
+        "salt": "low",
+        "saturated_fat": "high",
+        "sugars": "high",
+        "fat_100g": 31,
+        "saturated_fat_100g": 11,
+        "sugars_100g": 56,
+        "salt_100g": 0
+    }
+},
+{
+    "model": "product.product",
+    "pk": 9871,
+    "fields": {
+        "code": "3017620424403",
+        "product_name": "Nutella",
+        "brands": "Nutella",
+        "categories": "en:breakfasts, en:spreads, en:sweet-spreads, fr:pates-a-tartiner, en:chocolate-spreads, en:hazelnut-spreads, en:cocoa-and-hazelnuts-spreads",
+        "nutrition_grades": "e",
+        "url": "https://fr.openfoodfacts.org/produit/3017620424403/nutella",
+        "image_url": "https://static.openfoodfacts.org/images/products/301/762/042/4403/front_fr.5.400.jpg",
+        "image_small_url": "https://static.openfoodfacts.org/images/products/301/762/042/4403/front_fr.5.200.jpg",
+        "fat": "high",
+        "salt": "low",
+        "saturated_fat": "high",
+        "sugars": "high",
+        "fat_100g": 32,
+        "saturated_fat_100g": 11,
+        "sugars_100g": 57,
+        "salt_100g": 0
+    }
+},
+{
+    "model": "product.product",
+    "pk": 9426,
+    "fields": {
+        "code": "3017620422003",
+        "product_name": "Nutella",
+        "brands": "Ferrero",
+        "categories": "en:breakfasts, en:spreads, en:sweet-spreads, fr:pates-a-tartiner, en:chocolate-spreads, en:hazelnut-spreads, en:cocoa-and-hazelnuts-spreads",
+        "nutrition_grades": "e",
+        "url": "https://fr.openfoodfacts.org/produit/3017620422003/nutella-ferrero",
+        "image_url": "https://static.openfoodfacts.org/images/products/301/762/042/2003/front_fr.88.400.jpg",
+        "image_small_url": "https://static.openfoodfacts.org/images/products/301/762/042/2003/front_fr.88.200.jpg",
+        "fat": "high",
+        "salt": "low",
+        "saturated_fat": "high",
+        "sugars": "high",
+        "fat_100g": 31,
+        "saturated_fat_100g": 11,
+        "sugars_100g": 56,
+        "salt_100g": 0
+    }
+},
+{
+    "model": "product.product",
+    "pk": 7815,
+    "fields": {
+        "code": "3017620421044",
+        "product_name": "Nutella",
+        "brands": "Ferrero",
+        "categories": "P\u00e2tes \u00e0 tartiner aux noisettes et au cacao",
+        "nutrition_grades": "e",
+        "url": "https://fr.openfoodfacts.org/produit/3017620421044/nutella-ferrero",
+        "image_url": "https://static.openfoodfacts.org/images/products/301/762/042/1044/front_fr.10.400.jpg",
+        "image_small_url": "https://static.openfoodfacts.org/images/products/301/762/042/1044/front_fr.10.200.jpg",
+        "fat": "high",
+        "salt": "low",
+        "saturated_fat": "high",
+        "sugars": "high",
+        "fat_100g": 32,
+        "saturated_fat_100g": 11,
+        "sugars_100g": 57,
+        "salt_100g": 0
+    }
+},
+{
+    "model": "product.product",
+    "pk": 7437,
+    "fields": {
+        "code": "8000500082379",
+        "product_name": "Nutella",
+        "brands": "Nutella,Ferrero",
+        "categories": "Petit-d\u00e9jeuners,Produits \u00e0 tartiner,Produits \u00e0 tartiner sucr\u00e9s,P\u00e2tes \u00e0 tartiner,P\u00e2tes \u00e0 tartiner au chocolat,P\u00e2tes \u00e0 tartiner aux noisettes,P\u00e2tes \u00e0 tartiner aux noisettes et au cacao,Aliments et boissons de No\u00ebl",
+        "nutrition_grades": "e",
+        "url": "https://fr.openfoodfacts.org/produit/8000500082379/nutella",
+        "image_url": "https://static.openfoodfacts.org/images/products/800/050/008/2379/front_fr.57.400.jpg",
+        "image_small_url": "https://static.openfoodfacts.org/images/products/800/050/008/2379/front_fr.57.200.jpg",
+        "fat": "high",
+        "salt": "low",
+        "saturated_fat": "high",
+        "sugars": "high",
+        "fat_100g": 31,
+        "saturated_fat_100g": 11,
+        "sugars_100g": 56,
+        "salt_100g": 0
+    }
+},
+{
+    "model": "product.product",
+    "pk": 5704,
+    "fields": {
+        "code": "3017620421006",
+        "product_name": "Nutella",
+        "brands": "Ferrero",
+        "categories": "Petit-d\u00e9jeuners,Produits \u00e0 tartiner,Produits \u00e0 tartiner sucr\u00e9s,P\u00e2tes \u00e0 tartiner,P\u00e2tes \u00e0 tartiner au chocolat,P\u00e2tes \u00e0 tartiner aux noisettes,P\u00e2tes \u00e0 tartiner aux noisettes et au cacao",
+        "nutrition_grades": "e",
+        "url": "https://fr.openfoodfacts.org/produit/3017620421006/nutella-ferrero",
+        "image_url": "https://static.openfoodfacts.org/images/products/301/762/042/1006/front_fr.87.400.jpg",
+        "image_small_url": "https://static.openfoodfacts.org/images/products/301/762/042/1006/front_fr.87.200.jpg",
+        "fat": "high",
+        "salt": "low",
+        "saturated_fat": "high",
+        "sugars": "high",
+        "fat_100g": 31,
+        "saturated_fat_100g": 11,
+        "sugars_100g": 56,
+        "salt_100g": 0
+    }
+},
+{
+    "model": "product.product",
+    "pk": 4228,
+    "fields": {
+        "code": "80177173",
+        "product_name": "Nutella",
+        "brands": "Nutella,Ferrero",
+        "categories": "fr:P\u00e2tes \u00e0 tartiner aux noisettes et au cacao",
+        "nutrition_grades": "e",
+        "url": "https://fr.openfoodfacts.org/produit/80177173/nutella",
+        "image_url": "https://static.openfoodfacts.org/images/products/80177173/front_en.3.400.jpg",
+        "image_small_url": "https://static.openfoodfacts.org/images/products/80177173/front_en.3.200.jpg",
+        "fat": "high",
+        "salt": "low",
+        "saturated_fat": "high",
+        "sugars": "high",
+        "fat_100g": 32,
+        "saturated_fat_100g": 11,
+        "sugars_100g": 57,
+        "salt_100g": 0
+    }
+},
+{
+    "model": "product.product",
+    "pk": 4090,
+    "fields": {
+        "code": "3017620420047",
+        "product_name": "Nutella",
+        "brands": "Ferrero",
+        "categories": "Petit-d\u00e9jeuners,Produits \u00e0 tartiner,Produits \u00e0 tartiner sucr\u00e9s,P\u00e2tes \u00e0 tartiner,P\u00e2tes \u00e0 tartiner au chocolat,P\u00e2tes \u00e0 tartiner aux noisettes,P\u00e2tes \u00e0 tartiner aux noisettes et au cacao",
+        "nutrition_grades": "e",
+        "url": "https://fr.openfoodfacts.org/produit/3017620420047/nutella-ferrero",
+        "image_url": "https://static.openfoodfacts.org/images/products/301/762/042/0047/front_fr.77.400.jpg",
+        "image_small_url": "https://static.openfoodfacts.org/images/products/301/762/042/0047/front_fr.77.200.jpg",
+        "fat": "high",
+        "salt": "low",
+        "saturated_fat": "high",
+        "sugars": "high",
+        "fat_100g": 31,
+        "saturated_fat_100g": 11,
+        "sugars_100g": 56,
+        "salt_100g": 0
+    }
+}
+]
