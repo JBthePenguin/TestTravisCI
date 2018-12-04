@@ -2,6 +2,8 @@ env/
 
 pur_beurre_django_app/__pycache__/
 
+pur_beurre_django_app/local_settings.py
+
 account/__pycache__/
 
 account/migrations/__pycache__/

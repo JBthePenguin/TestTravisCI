@@ -4,10 +4,14 @@ django-debug-toolbar
 
 django-registration-redux
 
-git+https://github.com/openfoodfacts/openfoodfacts-python
-
 django-fixture-magic
+
+django-mailjet
+
+git+https://github.com/openfoodfacts/openfoodfacts-python
 
 psycopg2
 
 psycopg2-binary
+
+whitenoise
