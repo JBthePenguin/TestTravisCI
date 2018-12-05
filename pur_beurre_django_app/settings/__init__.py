@@ -20,11 +20,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECURITY WARNING: don't run with debug turned on in production!
-if os.environ.get('ENV') == 'PRODUCTION':
-    from .local_settings import SECRET_KEY, DEBUG
-else:
-    SECRET_KEY = '+z-i-54psmne(nqwcvs*6x9()2)m&mx$f24r$^0i^yz3^^sje*'
-    DEBUG = True
+SECRET_KEY = '+z-i-54psmne(nqwcvs*6x9()2)m&mx$f24r$^0i^yz3^^sje*'
+DEBUG = True
 
 
 ALLOWED_HOSTS = []
@@ -56,7 +53,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'pur_beurre_django_app.urls'
@@ -81,19 +77,16 @@ WSGI_APPLICATION = 'pur_beurre_django_app.wsgi.application'
 
 
 # Database
-if os.environ.get('ENV') == 'PRODUCTION':
-    from .local_settings import DATABASES
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql', # on utilise l'adaptateur postgresql
-            'NAME': 'db_pur_beurre', # le nom de notre base de donnees creee precedemment
-            'USER': 'pur_beurre_web_app', # attention : remplacez par votre nom d'utilisateur
-            'PASSWORD': 'Hummm',
-            'HOST': 'localhost',
-            'PORT': '5432',
-        }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql', # on utilise l'adaptateur postgresql
+        'NAME': 'db_pur_beurre', # le nom de notre base de donnees creee precedemment
+        'USER': 'pur_beurre_web_app', # attention : remplacez par votre nom d'utilisateur
+        'PASSWORD': 'Hummm',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
+}
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 # Password validation
@@ -123,15 +116,12 @@ LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
 # Confirmation email
-if os.environ.get('ENV') == 'PRODUCTION':
-    from .local_settings import EMAIL_BACKEND, MAILJET_API_KEY, MAILJET_API_SECRET, DEFAULT_FROM_EMAIL
-else:
-    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    DEFAULT_FROM_EMAIL = 'testing@example.com'
-    EMAIL_HOST_USER = ''
-    EMAIL_HOST_PASSWORD = ''
-    EMAIL_USE_TLS = False
-    EMAIL_PORT = 1025
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+DEFAULT_FROM_EMAIL = 'testing@example.com'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = False
+EMAIL_PORT = 1025
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
@@ -154,11 +144,7 @@ STATIC_URL = '/static/'
 
 INTERNAL_IPS = ['127.0.0.1']
 
-if os.environ.get('ENV') == 'PRODUCTION':
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-    # Simplified static file serving.
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
+# database for TravisCI
 if 'TRAVIS' in os.environ:
     DATABASES = {
         'default': {

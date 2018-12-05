@@ -13,5 +13,3 @@ git+https://github.com/openfoodfacts/openfoodfacts-python
 psycopg2
 
 psycopg2-binary
-
-whitenoise
