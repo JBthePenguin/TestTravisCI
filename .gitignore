@@ -6,6 +6,8 @@ pur_beurre_django_app/settings/production.py
 
 pur_beurre_django_app/staticfiles/
 
+pur_beurre_django_app/settings/__pycache__/
+
 account/__pycache__/
 
 account/migrations/__pycache__/
