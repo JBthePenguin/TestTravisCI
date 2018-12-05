@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -22,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECURITY WARNING: don't run with debug turned on in production!
 if os.environ.get('ENV') == 'PRODUCTION':
-    from local_settings import SECRET_KEY, DEBUG
+    from .local_settings import SECRET_KEY, DEBUG
 else:
     SECRET_KEY = '+z-i-54psmne(nqwcvs*6x9()2)m&mx$f24r$^0i^yz3^^sje*'
     DEBUG = True
@@ -83,7 +82,7 @@ WSGI_APPLICATION = 'pur_beurre_django_app.wsgi.application'
 
 # Database
 if os.environ.get('ENV') == 'PRODUCTION':
-    from local_settings import DATABASES
+    from .local_settings import DATABASES
 else:
     DATABASES = {
         'default': {
@@ -125,7 +124,7 @@ LOGOUT_REDIRECT_URL = '/'
 
 # Confirmation email
 if os.environ.get('ENV') == 'PRODUCTION':
-    from local_settings import EMAIL_BACKEND, MAILJET_API_KEY, MAILJET_API_SECRET, DEFAULT_FROM_EMAIL
+    from .local_settings import EMAIL_BACKEND, MAILJET_API_KEY, MAILJET_API_SECRET, DEFAULT_FROM_EMAIL
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     DEFAULT_FROM_EMAIL = 'testing@example.com'
@@ -156,7 +155,7 @@ STATIC_URL = '/static/'
 INTERNAL_IPS = ['127.0.0.1']
 
 if os.environ.get('ENV') == 'PRODUCTION':
-    STATIC_ROOT = os.path.join(BASE_ROOT, 'staticfiles')
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     # Simplified static file serving.
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
