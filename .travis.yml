@@ -23,6 +23,7 @@ install:
   - pip install selenium
 
 before_script:
+  - "export DJANGO_SETTINGS_MODULE=pur_beurre_django_app.settings"
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3 # give xvfb some time to start
