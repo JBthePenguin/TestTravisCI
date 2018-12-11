@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'registration',
     'fixture_magic',
+    'dbbackup',
 ]
 
 MIDDLEWARE = [

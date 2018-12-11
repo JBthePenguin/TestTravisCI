@@ -16,8 +16,14 @@ product/__pycache__/
 
 product/migrations/__pycache__/
 
+product/management/__pycache__/
+
+product/management/commands/__pycache__/
+
 favorite/__pycache__/
 
 favorite/migrations/__pycache__/
 
 geckodriver.log
+
+newrelic.ini

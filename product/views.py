@@ -8,6 +8,7 @@ from favorite.db_request import select_substitutes
 from product.save_in_db import save_product
 from .models import Product
 
+
 # VIEWS
 def index(request, alert_message=False):
     """ return the home page """

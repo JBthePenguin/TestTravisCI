@@ -13,3 +13,11 @@ git+https://github.com/openfoodfacts/openfoodfacts-python
 psycopg2
 
 psycopg2-binary
+
+sentry-sdk
+
+django-dbbackup
+
+dropbox
+
+django-storages
