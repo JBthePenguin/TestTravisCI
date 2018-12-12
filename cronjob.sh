@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # use the virtual environment for python
 source /home/purbeurre/TestTravisCI/env/bin/activate
 # update the database

@@ -19,4 +19,3 @@ class Command(BaseCommand):
         products_not_used = Product.objects.exclude(id__in=product_in_fav_ids)
         for product in products_not_used:
             product.delete()
-        print("DB Updated")
