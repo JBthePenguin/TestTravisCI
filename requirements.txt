@@ -25,3 +25,5 @@ django-storages
 gunicorn
 
 newrelic
+
+selenium
